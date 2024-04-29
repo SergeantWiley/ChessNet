@@ -32,7 +32,7 @@ num_epochs = 50
 
 Its recommended to have a understanding of Multidimensional Mathematics before procceeding. Specifically vectors and matrices
 
-Vecotrs signify direction and magnitude and in our case, a vector is a chess peice. The matrix itself is the chess board. While a chess board seems like a 2D enviroment, for a machine learn algorithm to understand it we have to break it into higher dimensions
+Vecotrs signify direction and magnitude and in our case, a vector is a chess peice. The matrix itself is the chess board. While a chess board seems like a 2D enviroment, for a machine learning algorithm to understand it has to be in higher dimensions
 ```bash
 -4 -2 -3 -5 -6 -3 -2 -4
 -1 -1 -1 -1 -1 -1 -1 -1
@@ -43,7 +43,7 @@ Vecotrs signify direction and magnitude and in our case, a vector is a chess pei
 1  1  1  1  1  1  1  1
 4  2  3  5  6  3  2  4
 ```
-This looks 2D for anyone unfamiliar to matrices but this is in fact in 8 dimensions. Each value is a chess piece to us but its a vector far as machine learning is concerned and this is critical to determine the two transformation matrices. With this in mind, its important to know that each formulas below interact with one position (nueron) within our matrix.
+This looks 2D for anyone unfamiliar to matrices but this is in fact in 8 dimensions. Each value is a chess piece to us but its a vector far as machine learning is concerned and this is critical to determine the two transformation matrices. With this in mind, its important to know that each formula below interact with one position (nueron) within our matrix.
 
 With that in mind, we will begin our first linear transformation matrix function.
 
@@ -86,6 +86,9 @@ ReLU(z_1) = \begin{cases}
 \text{if } z \geq 0 \\
 0 \text{if } z < 0
 \end{cases}
+`$
+
+$`
 ReLU(z-1) = a_1
 `$
 
@@ -119,7 +122,7 @@ $`m_t = \beta_1\cdot m_{t-1}+(1+\beta_1)\cdot \nabla_0J(\Theta_t)`$
 $`v_t = \beta_1\cdot v_{t-1}+(1+\beta_1)\cdot (\nabla_0J(\Theta_t))^2`$
 
 
-To simplfy this, we take an exponetial decay which is usally 0.9 to 0.999 but may very depending on the percision we need and reference it to our past vectors as well as parameters. These values will then be passed to a bias correction with is a standard procedure used in stastistics
+To simplfy this, we take an exponetial decay which is usally 0.9 to 0.999 but may very depending on the percision we need and reference it to our past vectors as well as parameters. These values will then be passed to a bias correction whucg is a standard procedure used in stastistics
 
 $`m_t = \frac{{m_t}}{{1-\mathrm{\beta}_{t}^{1}}}`$
 
@@ -129,9 +132,9 @@ The part above is just an adjustment to add additional integrity so its not requ
 
 $`θ_{t+1}=θ_t​− \frac{η}{v_t+ϵ}⋅m_t`$
 
-While this formula may also look scary due to some new players rather its realitively simple. Heres a simplifed break down
+While this formula may also look scary due to some new characters rather its realitively simple. Heres a simplifed break down
 
-Our new parameter we will pass back up to our $`\nabla_0J(\Theta)`$  to repeat the proccess cycle through a new iteration. Our current paramters are subtractracted by our learning_rate ($`{η}`$) hyperparameters divided by our next $`v_t`$ vector. The wierd looking symbol $`ϵ~`$ is a very small value (around $`10^{-8}`$) prevent divide by 0 errors. Then our current $`m_t`$ vector is multipled to get a new $`\Theta`$. 
+Our new parameter we will pass back up to our $`\nabla_0J(\Theta)`$  to repeat the proccess cycle through a new iteration. Our current paramters are subtractracted by our learning_rate ($`{η}`$) hyperparameter is divided by our next $`v_t`$ vector. The wierd looking symbol $`ϵ~`$ is a very small value (around $`10^{-8}`$) prevent divide by 0 errors. Then our current $`m_t`$ vector is multipled to get a new $`\Theta`$. 
 
 The final part. Epochs. They are the only thing we havent mentioned. A side note about our wierd $`{η}`$ character. This is the learning_rate parameter we declared. Within one epoch we have many iterations ($`{t}`$). To find the amount of iterations, its pretty simple. 
 
