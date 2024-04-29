@@ -79,7 +79,7 @@ W_{1,64,1} & W_{1,64,2} & \dots & W_{1,64,128} \\
 b_{1,1} & b_{1,2} & \dots & b_{1,128} \\
 \end{bmatrix}`$
 
-Quite a lot. Thats not even the second layer. The second layer has to get pass into a Relu Function but mathematically it looks the simpler. To descibe the ReUL function lightly, it converts each value into a value ranging from 0 to 1
+Quite a lot. Thats not even the second layer. The second layer has to get pass into a Relu (Rectified Linear Unit) Function but mathematically it looks way simpler. To descibe the ReUL function lightly, it converts each value into a value ranging from 0 to 1
 
 $`
 ReLU(z_1) = \begin{cases}
