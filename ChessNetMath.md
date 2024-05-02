@@ -66,7 +66,7 @@ W_{1,2,1} & W_{1,2,2} & \dots & W_{1,2,128} \\
 W_{1,64,1} & W_{1,64,2} & \dots & W_{1,64,128} \\
 \end{bmatrix}`$
 
-$`[ b_1 = \begin{bmatrix}
+$`b_1 = \begin{bmatrix}
 b_{1,1} & b_{1,2} & \dots & b_{1,128} \\
 \end{bmatrix}`$
 
