@@ -143,7 +143,7 @@ class ChessNet(nn.Module):
 ```
 First is the fc1 and fc2. Each one of these are a layer of the network. The FC stands for Fully connected. In this case we only need 2 layers. The reason for this is the same reason why we did only 2 game states per data point. We want teach 2 concepts. One is the value of the piece and one is the value of the position. 
 
-In chess, a queen near the middle of the board is more valuable then a pawn in near the end of the board. The first layer is finding the value of the piece and then second is finding the value of the positions. 
+In chess, a queen near the middle of the board is more valuable then a pawn near the end of the board. The first layer is finding the value of the piece and then second is finding the value of the positions. 
 
 Since each state is based off the state from the last, we move forward setting x to our first layer then after the value of the peice is determined or learned, it gets passed to find the value of the position that is being determined or learned so the new x is sent for evaluation which brings us to the next part, which are the hyper paramters
 
@@ -157,11 +157,11 @@ learning_rate = 0.001
 batch_size = 64
 num_epochs = 50
 ```
-A few things. Number one is the inptu_size. The input often must be the same size as the tensor so we pass 64. then the hidden_size for the model doesnt nessarily have to be the same size. The output_size similear to the input, must be the same size as the input tensor unless the output tensor is a different size then the output_size should be the same size as the tensor output size
+There are quite a few things. Number one is the inptu_size. The input often must be the same size as the tensor so we pass 64. The hidden_size for the model doesnt nessarily have to be the same size so we increase it 128. The output_size similear to the input, must be the same size as the input tensor unless the output tensor is a different size then the output_size should be the same size as the tensor output size
 
 The learning_rate is important since its tells how much each nuerons values can change per every epoch. Speaking of epochs, epochs are the number of testing and evaluation of the nueral networks performance. 
 
-batch_size is the number of data points each nueron gets. A smaller number means more nuerons have to work togeather decreasing the chance of over fitting
+batch_size is used meant to regulate the quatity of connections between each nueron. This gives mores for each nueron reducing the chance of overfitting.
 
 With that, Hyperparamaters are completed!
 
@@ -208,8 +208,6 @@ for epoch in range(num_epochs):
 ```
 Our loop will use the epochs we declared above and place everything on the device of our choice. This is optional and can be removed but it recommended as this is what allows the GPU to be used if there is one. 
 
-Remeber our dataset was to our train_loader so know during every iteration of training, its extracted back out. We then get what the model is curerntly trained on then we calculate the loss
-
 ```python
 # inside the for loop
 outputs = model(inputs)
@@ -223,7 +221,7 @@ optimizer.zero_grad()
 loss.backward()
 optimizer.step()
 ```
-So we can monitor the progress, we include a standard print function. This is very common to see the current status of the model
+So we can monitor the progress, we include a standard print function. This is very common to see the current status of the model however its to nessary. Epochs may be misleading in that epochs are stages of training rather instead they are used for breaking up the training proccess to display current status.
 
 ```python
 print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
@@ -269,7 +267,7 @@ A lot is the same besides the last 3. We pull our saved model and give it to our
 
 ## Generating perdictions
 
-First we have to do some Data Formatting but its not as much as before. Since we only have 1 game state and want to see the result is, we only need 3 small function.
+First we have to do some Data Formatting but its not as much as before. Since we only have 1 game state and want to see the result is, we only need 3 small functions.
 
 ```python
 def preprocess_input(chess_state):
@@ -304,7 +302,7 @@ input_state = np.array([-4., -2., -3., -5., -6., -3., -2., -4.,
 
 For simplicity we harded coded a chess state. 
 Negative values are black while positive are black pieces.
-1s are paws, 6s are kings, 5s are quenns, 3s are bishops, 4s are roooks, and 2s are knights
+1s are pawns, 2s are knights, 3s are bishops, 4s are rooks, 5s are kings, and 6s are queens.
 
 Now all we have to do is run the predict_next_state function
 ```python
@@ -315,3 +313,6 @@ print(next_state)
 # ITS COMPLETE!
 ## We have our Chess Net!
 But there is a problem. Its not very good and it doesnt understand whats a legal move and an illegal move. Thats fine since this was never intended to be a useful model. In matter a fact, its so bad, it makes up its own pieces but the goal was to learn and follow the proccess of how machine learning works and the proccess of preparing, formating, training, and implenting Machine learning models. 
+
+# Conclusion
+It might be helpful to understand the model's thought proccess. After all, nauerel networks are based off the human brain. So, lets start with its "knowledge". It knows the vales of the pieces and the values of the positions. If thats all someone knew about chess, they will begin to realize that larger numbers = better valued peices. So the model figured out it can just make its own peices since games that finish often have a lot more value pieces left such as queens, rooks, and bishops. Even if we swapped the numbers so that queens are 1s and pawns are worth 6, the model will learn that smaller numbers are better as the end of the game often have smaller number peices such as the queens (if they are 1s) at the end of the game. Its not a matter of the encoding, its a matter of the true meaning behind the data so before we can build a perfect, we need to 
