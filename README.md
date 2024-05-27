@@ -1,7 +1,7 @@
 
 # Chess Net
 
-Chess Net is designed to teach machine learning to those unfamilier with with complexities. Some prequsites are a prior understanding of overal python syntax. Specifically function and classes. Mathemtatical syntax will be described but understanding mathemtaics is not a requirement for understanding machine learning although is helpful for some more complex understanding
+Chess Net is designed to teach machine learning to those unfamilier with complexities. Some prequsites are a prior understanding of overal python syntax. Specifically function and classes. Mathemtatical syntax will be described but understanding mathemtaics is not a requirement for understanding machine learning although is helpful for some more complex understanding
 
 
 
