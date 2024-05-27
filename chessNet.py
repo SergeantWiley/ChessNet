@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
+
 class ChessNet(nn.Module):
     def __init__(self, input_size, hidden_size, output_size):
         super(ChessNet, self).__init__()
@@ -139,7 +140,6 @@ class Model:
         return model
 
 class Train:
-    
     '''
         Trains the actual model
 
@@ -155,6 +155,7 @@ class Train:
         self.device = "cuda" if gpu and torch.cuda.is_available() else "cpu"
         self.hyperparameters = hyperparameters
         self.model = model
+
     def data_loading(self):
         # Destructure hyperparameters
         batch_size = self.hyperparameters.batch_size
@@ -247,7 +248,7 @@ make_model = Model(hyperparameters,gpu=True)
 model = make_model.makeModel()
 
 # Starting Training
-train = Train(dataset, model, hyperparameters, gpu=True)
+train = Train(dataset, model, hyperparameters, gpu=False)
 train.train()
 #Save the model
 model_path = 'chess_net.pth'

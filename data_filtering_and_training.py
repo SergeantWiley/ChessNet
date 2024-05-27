@@ -9,21 +9,15 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # Check if
 print("Training Device:", device)
 # Collect all moves from game.png
 def parse_pgn_moves(file_path):
-    all_games = []
+    all_moves = []
     with open(file_path) as pgn_file:
-        game_moves = []
         while True:
             game = chess.pgn.read_game(pgn_file)
             if game is None:
                 break
-            moves = [str(move) for move in game.mainline_moves()]
-            game_moves.extend(moves)
-            # Check if the current game has ended (indicated by a move numbered "1.")
-            if moves and moves[0].startswith("1."):
-                all_games.append(game_moves)
-                game_moves = []  # Reset moves for the next game
-    return all_games
-
+            moves = [move.uci() for move in game.mainline_moves()]
+            all_moves.extend(moves)
+    return all_moves
 
 
 def update_board(board, move): # Pass each last state into the game engine
@@ -45,9 +39,15 @@ moves = parse_pgn_moves(file_path)
 board = chess.Board()
 board_states = []
 # Append every game to one varaible
-for move in moves:
-    update_board(board, move)
-    board_states.append(board_to_matrix(board))
+def create_games(board,moves):
+    for move in moves:
+        try:
+            update_board(board, move)
+            board_states.append(board_to_matrix(board))
+        except:
+            board.empty()
+create_games(board,moves)
+
 def board_to_tensor(board_state):
     return torch.tensor(board_state).float().flatten()
 
@@ -69,7 +69,6 @@ def prepare_dataset(board_states):
 
 # Prepare dataset from board states
 dataset = prepare_dataset(board_states)
-print(dataset)
 # Check the length of the dataset
 print("Number of samples in the dataset:", len(dataset))
 # Example of accessing a sample from the dataset
@@ -99,10 +98,8 @@ num_epochs = 50
 
 # Convert input and target tensors to DataLoader
 train_loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-
 # Initialize the model and move it to the device
 model = ChessNet(input_size, hidden_size, output_size).to(device)
-
 # Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
@@ -127,7 +124,5 @@ for epoch in range(num_epochs):
 
 print('Training finished!')
 model_path = 'chess_net.pth'
-
-# Save the model
 torch.save(model.state_dict(), model_path)
 print(f"Model saved to {model_path}")

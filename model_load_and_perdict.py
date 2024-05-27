@@ -6,6 +6,27 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 import numpy as np
+from chessNet import ChessNet,Hyperparameters,Model,Postprocessing
+hyperparameters = Hyperparameters()
+make_model = Model(hyperparameters,gpu=True)
+model = make_model.makeModel()
+model_path = 'chess_net.pth'
+input_state = np.array([-4., -2., -3., -5., -6., -3., -2., -4.,
+                        -1., -1., -1., -1., -1., -1., -1., -1.,
+                         0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+                         0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+                         0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+                         0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
+                         1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,
+                         4.,  2.,  3.,  5.,  6.,  3.,  2.,  4.])
+post_train = Postprocessing(model,True)
+model = post_train.load_model_data(model,model_path)
+print(post_train.predict_next_state(input_state))
+
+
+
+
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Model has been placed on device: ", device)
 class ChessNet(nn.Module):
