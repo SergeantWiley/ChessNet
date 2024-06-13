@@ -1,7 +1,7 @@
 
 # Chess Net
 
-Chess Net is designed to teach machine learning to those unfamilier with complexities. Some prequsites are a prior understanding of overal python syntax. Specifically function and classes. Mathemtatical syntax will be described but understanding mathemtaics is not a requirement for understanding machine learning although is helpful for some more complex understanding
+Chess Net is designed to teach machine learning to those unfamilier with complexities. Some prequsites are a prior understanding of overal python syntax. Specifically function and classes. Mathematics is not a requirement for understanding machine learning although is helpful for some more complex understanding
 
 
 
@@ -94,7 +94,7 @@ moves = parse_pgn_moves(file_path) # Collect all moves
 board = chess.Board() # Create a python-chess game engine
 board_states = []
 ```
-Then running a for loop to interate over moves, we update the board state and then return the board state and we append that to the board state. 
+Then running a for loop to interate over moves, we update the board state and then return the board state and we append that to the board state tensor. 
 ```python
 for move in moves:
     update_board(board, move)
@@ -103,7 +103,7 @@ for move in moves:
 Data Preproccessing Completed!
 ## Data Formatting 
 
-Currently, our data is in a numpy matrix. Instead, it needs to be in a tensor. Every game state needs to be passed into the function below to format it for Training later
+Currently, our data is in a numpy matrix. Instead, it needs to be in a tensor. Every game state needs to be passed into the function below to format it for training later
 ```python
 def prepare_dataset(board_states):
     dataset = []
@@ -143,7 +143,7 @@ class ChessNet(nn.Module):
 ```
 First is the fc1 and fc2. Each one of these are a layer of the network. The FC stands for Fully connected. In this case we only need 2 layers. The reason for this is the same reason why we did only 2 game states per data point. We want teach 2 concepts. One is the value of the piece and one is the value of the position. 
 
-In chess, a queen near the middle of the board is more valuable then a pawn in near the end of the board. The first layer is finding the value of the piece and then second is finding the value of the positions. 
+In chess, a queen near the middle of the board is more valuable then a pawn near the end of the board. The first layer is finding the value of the piece and then second is finding the value of the positions. 
 
 Since each state is based off the state from the last, we move forward setting x to our first layer then after the value of the peice is determined or learned, it gets passed to find the value of the position that is being determined or learned so the new x is sent for evaluation which brings us to the next part, which are the hyper paramters
 
@@ -157,7 +157,7 @@ learning_rate = 0.001
 batch_size = 64
 num_epochs = 50
 ```
-A few things. Number one is the inptu_size. The input often must be the same size as the tensor so we pass 64. then the hidden_size for the model doesnt nessarily have to be the same size. The output_size similear to the input, must be the same size as the input tensor unless the output tensor is a different size then the output_size should be the same size as the tensor output size
+A few things. Number one is the inptu_size. The input size is the same size as the tensor so we pass 64. The hidden_size for the model doesnt nessarily have to be the same size. The output_size similear to the input, must be the same size as the input tensor unless the output tensor is a different size then the output_size should be the same size as the tensor output size
 
 The learning_rate is important since its tells how much each nuerons values can change per every epoch. Speaking of epochs, epochs are the number of testing and evaluation of the nueral networks performance. 
 
@@ -172,7 +172,7 @@ Now for the fun part. Training begins by passing our dataset to the pytorch data
 ```python
 train_loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
 ```
-Often its best to mix up different data sets to decrease overfitting even more and our dataloader does that for us. It also splits our data for us as well unlike other non pytorch libraries.
+Often its best to mix up different data sets to decrease overfitting even more and our dataloader does that for us. It also splits our data into testing and training sets for us as well unlike other non pytorch libraries.
 
 Once we have loaded our data, we need to make a model
 
@@ -206,9 +206,9 @@ for epoch in range(num_epochs):
     # Print loss after each epoch
     print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 ```
-Our loop will use the epochs we declared above and place everything on the device of our choice. This is optional and can be removed but it recommended as this is what allows the GPU to be used if there is one. 
+Our loop will use the epochs we declared above and place everything on the device of our choice. This is optional and can be removed but its recommended as this is what allows the GPU to be used if there is one. 
 
-Remeber our dataset was to our train_loader so know during every iteration of training, its extracted back out. We then get what the model is curerntly trained on then we calculate the loss
+We then get what the model is curerntly trained on then we calculate the loss
 
 ```python
 # inside the for loop
@@ -223,13 +223,14 @@ optimizer.zero_grad()
 loss.backward()
 optimizer.step()
 ```
-So we can monitor the progress, we include a standard print function. This is very common to see the current status of the model
+So that we can monitor the progress, we include a standard print function. This is very commonly used to see the current status of the model
 
 ```python
 print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item():.4f}')
 ```
 
 And of course, we want to save our model so we can use it later
+
 ```python
 model_path = 'chess_net.pth'
 torch.save(model.state_dict(), model_path)
@@ -269,7 +270,7 @@ A lot is the same besides the last 3. We pull our saved model and give it to our
 
 ## Generating perdictions
 
-First we have to do some Data Formatting but its not as much as before. Since we only have 1 game state and want to see the result is, we only need 3 small function.
+First we have to do some Data Formatting but its not as much as before. Since we only have 1 game state and want to see the result is, we only need 3 small functions.
 
 ```python
 def preprocess_input(chess_state):
@@ -304,7 +305,7 @@ input_state = np.array([-4., -2., -3., -5., -6., -3., -2., -4.,
 
 For simplicity we harded coded a chess state. 
 Negative values are black while positive are black pieces.
-1s are paws, 6s are kings, 5s are quenns, 3s are bishops, 4s are roooks, and 2s are knights
+1s are pawns, 6s are kings, 5s are queens, 3s are bishops, 4s are rooks, and 2s are knights
 
 Now all we have to do is run the predict_next_state function
 ```python
