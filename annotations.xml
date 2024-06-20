@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>964322</id>
+      <size>93</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2024-06-19 00:58:45.260175+00:00</created>
+      <updated>2024-06-19 01:35:31.719264+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>92</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>966201</id>
+          <start>0</start>
+          <stop>92</stop>
+          <url>https://app.cvat.ai/api/jobs/964322</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>s3976</username>
+        <email>purplebelt2003@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>Label</name>
+          <color>#fa3253</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2024-06-19 01:35:50.983187+00:00</dumped>
+  </meta>
+  <image id="0" name="image507.jpg" width="1920" height="1080">
+  </image>
+  <image id="1" name="image508.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="923.60" ytl="531.76" xbr="974.50" ybr="631.90" z_order="0">
+    </box>
+  </image>
+  <image id="2" name="image509.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="947.72" ytl="548.67" xbr="967.60" ybr="586.60" z_order="0">
+    </box>
+  </image>
+  <image id="3" name="image510.jpg" width="1920" height="1080">
+  </image>
+  <image id="4" name="image511.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="945.40" ytl="551.20" xbr="958.80" ybr="571.20" z_order="0">
+    </box>
+  </image>
+  <image id="5" name="image512.jpg" width="1920" height="1080">
+  </image>
+  <image id="6" name="image513.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="949.50" ytl="546.91" xbr="962.70" ybr="568.60" z_order="0">
+    </box>
+  </image>
+  <image id="7" name="image514.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="958.08" ytl="543.98" xbr="973.42" ybr="568.38" z_order="0">
+    </box>
+  </image>
+  <image id="8" name="image515.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="927.90" ytl="548.88" xbr="943.60" ybr="572.10" z_order="0">
+    </box>
+  </image>
+  <image id="9" name="image516.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="955.82" ytl="568.50" xbr="971.10" ybr="586.40" z_order="0">
+    </box>
+  </image>
+  <image id="10" name="image517.jpg" width="1920" height="1080">
+  </image>
+  <image id="11" name="image518.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="910.10" ytl="536.20" xbr="948.70" ybr="607.80" z_order="0">
+    </box>
+  </image>
+  <image id="12" name="image519.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="963.00" ytl="584.30" xbr="1001.10" ybr="657.30" z_order="0">
+    </box>
+  </image>
+  <image id="13" name="image520.jpg" width="1920" height="1080">
+  </image>
+  <image id="14" name="image521.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="981.05" ytl="546.47" xbr="993.10" ybr="584.99" z_order="0">
+    </box>
+  </image>
+  <image id="15" name="image522.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="972.86" ytl="557.45" xbr="984.40" ybr="600.33" z_order="0">
+    </box>
+  </image>
+  <image id="16" name="image523.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="929.30" ytl="523.50" xbr="945.40" ybr="561.70" z_order="0">
+    </box>
+  </image>
+  <image id="17" name="image524.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="960.40" ytl="562.23" xbr="981.10" ybr="603.80" z_order="0">
+    </box>
+  </image>
+  <image id="18" name="image525.jpg" width="1920" height="1080">
+  </image>
+  <image id="19" name="image526.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="991.70" ytl="526.10" xbr="1015.10" ybr="569.80" z_order="0">
+    </box>
+  </image>
+  <image id="20" name="image527.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="951.50" ytl="615.20" xbr="974.10" ybr="658.50" z_order="0">
+    </box>
+  </image>
+  <image id="21" name="image528.jpg" width="1920" height="1080">
+  </image>
+  <image id="22" name="image529.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="969.20" ytl="539.90" xbr="992.45" ybr="597.20" z_order="0">
+    </box>
+  </image>
+  <image id="23" name="image530.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="951.60" ytl="581.90" xbr="972.80" ybr="633.50" z_order="0">
+    </box>
+  </image>
+  <image id="24" name="image531.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1005.80" ytl="479.71" xbr="1030.20" ybr="527.60" z_order="0">
+    </box>
+  </image>
+  <image id="25" name="image532.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="930.10" ytl="422.70" xbr="954.70" ybr="468.62" z_order="0">
+    </box>
+  </image>
+  <image id="26" name="image533.jpg" width="1920" height="1080">
+  </image>
+  <image id="27" name="image534.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="915.20" ytl="503.90" xbr="935.10" ybr="544.76" z_order="0">
+    </box>
+  </image>
+  <image id="28" name="image535.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="983.00" ytl="560.70" xbr="1003.14" ybr="607.04" z_order="0">
+    </box>
+  </image>
+  <image id="29" name="image536.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="892.21" ytl="486.03" xbr="905.30" ybr="527.72" z_order="0">
+    </box>
+  </image>
+  <image id="30" name="image537.jpg" width="1920" height="1080">
+  </image>
+  <image id="31" name="image538.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="887.98" ytl="505.28" xbr="941.10" ybr="595.21" z_order="0">
+    </box>
+  </image>
+  <image id="32" name="image539.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="937.20" ytl="582.88" xbr="988.17" ybr="678.38" z_order="0">
+    </box>
+  </image>
+  <image id="33" name="image540.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="947.45" ytl="397.37" xbr="994.81" ybr="489.48" z_order="0">
+    </box>
+  </image>
+  <image id="34" name="image541.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="830.93" ytl="538.82" xbr="873.70" ybr="625.21" z_order="0">
+    </box>
+  </image>
+  <image id="35" name="image542.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="983.50" ytl="450.87" xbr="1032.90" ybr="548.20" z_order="0">
+    </box>
+  </image>
+  <image id="36" name="image543.jpg" width="1920" height="1080">
+  </image>
+  <image id="37" name="image544.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="860.00" ytl="530.60" xbr="893.80" ybr="592.01" z_order="0">
+    </box>
+  </image>
+  <image id="38" name="image545.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="976.80" ytl="553.90" xbr="1008.20" ybr="623.70" z_order="0">
+    </box>
+  </image>
+  <image id="39" name="image546.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1035.40" ytl="499.30" xbr="1060.70" ybr="550.50" z_order="0">
+    </box>
+  </image>
+  <image id="40" name="image547.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="893.40" ytl="455.00" xbr="919.00" ybr="516.70" z_order="0">
+    </box>
+  </image>
+  <image id="41" name="image548.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1026.20" ytl="514.31" xbr="1044.54" ybr="560.40" z_order="0">
+    </box>
+  </image>
+  <image id="42" name="image549.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="948.80" ytl="530.30" xbr="967.40" ybr="577.90" z_order="0">
+    </box>
+  </image>
+  <image id="43" name="image550.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="941.29" ytl="414.98" xbr="967.60" ybr="470.40" z_order="0">
+    </box>
+  </image>
+  <image id="44" name="image551.jpg" width="1920" height="1080">
+  </image>
+  <image id="45" name="image552.jpg" width="1920" height="1080">
+  </image>
+  <image id="46" name="image553.jpg" width="1920" height="1080">
+  </image>
+  <image id="47" name="image554.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="885.70" ytl="530.08" xbr="920.50" ybr="624.27" z_order="0">
+    </box>
+  </image>
+  <image id="48" name="image555.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="959.80" ytl="528.70" xbr="993.00" ybr="612.16" z_order="0">
+    </box>
+  </image>
+  <image id="49" name="image556.jpg" width="1920" height="1080">
+  </image>
+  <image id="50" name="image557.jpg" width="1920" height="1080">
+  </image>
+  <image id="51" name="image558.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="935.80" ytl="479.84" xbr="949.70" ybr="521.15" z_order="0">
+    </box>
+  </image>
+  <image id="52" name="image559.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1097.40" ytl="319.80" xbr="1116.07" ybr="368.88" z_order="0">
+    </box>
+  </image>
+  <image id="53" name="image560.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="995.65" ytl="492.51" xbr="1018.80" ybr="566.20" z_order="0">
+    </box>
+  </image>
+  <image id="54" name="image561.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="872.20" ytl="546.47" xbr="911.20" ybr="625.80" z_order="0">
+    </box>
+  </image>
+  <image id="55" name="image562.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1050.65" ytl="463.42" xbr="1118.10" ybr="635.20" z_order="0">
+    </box>
+  </image>
+  <image id="56" name="image563.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1008.00" ytl="593.83" xbr="1046.20" ybr="653.30" z_order="0">
+    </box>
+  </image>
+  <image id="57" name="image564.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1010.58" ytl="361.36" xbr="1047.06" ybr="423.81" z_order="0">
+    </box>
+  </image>
+  <image id="58" name="image565.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1108.70" ytl="498.98" xbr="1145.90" ybr="553.10" z_order="0">
+    </box>
+  </image>
+  <image id="59" name="image566.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="656.00" ytl="628.44" xbr="706.50" ybr="707.50" z_order="0">
+    </box>
+  </image>
+  <image id="60" name="image567.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="938.81" ytl="384.78" xbr="969.90" ybr="453.80" z_order="0">
+    </box>
+  </image>
+  <image id="61" name="image568.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="940.70" ytl="694.63" xbr="972.50" ybr="755.20" z_order="0">
+    </box>
+  </image>
+  <image id="62" name="image569.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="926.90" ytl="500.60" xbr="955.80" ybr="558.46" z_order="0">
+    </box>
+  </image>
+  <image id="63" name="image570.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1014.10" ytl="522.76" xbr="1058.60" ybr="583.51" z_order="0">
+    </box>
+  </image>
+  <image id="64" name="image571.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="969.61" ytl="739.89" xbr="1005.61" ybr="805.81" z_order="0">
+    </box>
+  </image>
+  <image id="65" name="image572.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="899.77" ytl="422.00" xbr="928.00" ybr="476.60" z_order="0">
+    </box>
+  </image>
+  <image id="66" name="image573.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="986.48" ytl="558.40" xbr="1015.20" ybr="611.60" z_order="0">
+    </box>
+  </image>
+  <image id="67" name="image574.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="928.00" ytl="492.48" xbr="961.90" ybr="551.02" z_order="0">
+    </box>
+  </image>
+  <image id="68" name="image575.jpg" width="1920" height="1080">
+  </image>
+  <image id="69" name="image576.jpg" width="1920" height="1080">
+  </image>
+  <image id="70" name="image577.jpg" width="1920" height="1080">
+  </image>
+  <image id="71" name="image578.jpg" width="1920" height="1080">
+  </image>
+  <image id="72" name="image579.jpg" width="1920" height="1080">
+  </image>
+  <image id="73" name="image580.jpg" width="1920" height="1080">
+  </image>
+  <image id="74" name="image581.jpg" width="1920" height="1080">
+  </image>
+  <image id="75" name="image582.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="961.78" ytl="511.64" xbr="976.20" ybr="542.90" z_order="0">
+    </box>
+  </image>
+  <image id="76" name="image583.jpg" width="1920" height="1080">
+  </image>
+  <image id="77" name="image584.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="957.65" ytl="621.86" xbr="971.40" ybr="646.70" z_order="0">
+    </box>
+  </image>
+  <image id="78" name="image585.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="968.44" ytl="540.54" xbr="992.70" ybr="576.70" z_order="0">
+    </box>
+  </image>
+  <image id="79" name="image586.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="965.26" ytl="580.40" xbr="985.10" ybr="621.43" z_order="0">
+    </box>
+  </image>
+  <image id="80" name="image587.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="961.70" ytl="469.56" xbr="977.26" ybr="516.30" z_order="0">
+    </box>
+  </image>
+  <image id="81" name="image588.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="928.90" ytl="552.62" xbr="946.00" ybr="586.50" z_order="0">
+    </box>
+  </image>
+  <image id="82" name="image589.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="920.09" ytl="554.92" xbr="939.33" ybr="586.70" z_order="0">
+    </box>
+  </image>
+  <image id="83" name="image590.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="945.75" ytl="540.91" xbr="962.90" ybr="574.81" z_order="0">
+    </box>
+  </image>
+  <image id="84" name="image591.jpg" width="1920" height="1080">
+  </image>
+  <image id="85" name="image592.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="943.70" ytl="545.51" xbr="956.48" ybr="578.10" z_order="0">
+    </box>
+  </image>
+  <image id="86" name="image593.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="944.38" ytl="525.28" xbr="966.70" ybr="565.00" z_order="0">
+    </box>
+  </image>
+  <image id="87" name="image594.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="953.30" ytl="529.25" xbr="974.60" ybr="576.90" z_order="0">
+    </box>
+  </image>
+  <image id="88" name="image595.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="967.70" ytl="546.17" xbr="987.61" ybr="597.78" z_order="0">
+    </box>
+  </image>
+  <image id="89" name="image596.jpg" width="1920" height="1080">
+  </image>
+  <image id="90" name="image597.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="838.30" ytl="533.50" xbr="901.40" ybr="700.30" z_order="0">
+    </box>
+  </image>
+  <image id="91" name="image598.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="1009.75" ytl="406.74" xbr="1077.97" ybr="583.68" z_order="0">
+    </box>
+  </image>
+  <image id="92" name="image599.jpg" width="1920" height="1080">
+    <box label="Label" source="manual" occluded="0" xtl="900.98" ytl="318.79" xbr="951.51" ybr="463.98" z_order="0">
+    </box>
+  </image>
+</annotations>
