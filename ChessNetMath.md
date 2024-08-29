@@ -122,7 +122,7 @@ $`m_t = \beta_1\cdot m_{t-1}+(1+\beta_1)\cdot \nabla_0J(\Theta_t)`$
 $`v_t = \beta_1\cdot v_{t-1}+(1+\beta_1)\cdot (\nabla_0J(\Theta_t))^2`$
 
 
-To simplfy this, we take an exponetial decay which is usally 0.9 to 0.999 but may very depending on the percision we need and reference it to our past vectors as well as parameters. These values will then be passed to a bias correction whucg is a standard procedure used in stastistics
+To simplfy this, we take an exponetial decay which is usally 0.9 to 0.999 but may very depending on the percision we need and reference it to our past vectors as well as parameters. These values will then be passed to a bias correction which is a standard procedure used in stastistics
 
 $`m_t = \frac{{m_t}}{{1-\mathrm{\beta}_{t}^{1}}}`$
 
